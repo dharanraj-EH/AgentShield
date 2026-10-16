@@ -1,0 +1,21 @@
+# Free PUBLIC RESEARCH PILOT, not a company production/SLA deployment.
+# Create a free external PostgreSQL database (e.g. Neon) and supply its TLS URL.
+services:
+  - type: web
+    name: agentshield-pilot
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: AGENTSHIELD_PUBLIC
+        value: "1"
+      - key: AGENTSHIELD_PUBLIC_REGISTRATION
+        value: "1"
+      - key: AGENTSHIELD_ENABLE_REAL_MODEL
+        value: "0"
+      - key: AGENTSHIELD_LAB_ROOT
+        value: /tmp/lab
+      - key: DATABASE_URL
+        sync: false

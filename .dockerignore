@@ -1,0 +1,10 @@
+.venv
+frontend/node_modules
+frontend/dist
+lab
+*.db
+.env
+.git
+work
+evaluation-output
+tests/__pycache__

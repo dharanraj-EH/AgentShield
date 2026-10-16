@@ -1,0 +1,5 @@
+/* Keep closed mobile navigation out of keyboard and accessibility navigation. */
+@media(max-width:900px){aside{visibility:hidden}.nav-open aside{visibility:visible}}
+.table-pagination{display:flex;justify-content:space-between;align-items:center;gap:15px;padding-top:18px;border-top:1px solid #edf0f3;font-size:11px;color:#6b788a}
+.table-pagination>div{display:flex;gap:8px}.table-pagination .secondary{padding:7px 10px;font-size:11px;min-height:32px}
+@media(max-width:620px){.table-pagination{flex-wrap:wrap}}
